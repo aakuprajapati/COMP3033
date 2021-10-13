@@ -3,59 +3,6 @@ const router = express.Router();
 
 
 router.get('/', (req, res, next) => {
-    
-    var tempX = req.query.x;
-    var tempY = req.query.y;
-    var x = parseInt(tempX, 10);
-    var y = parseInt(tempY, 10);
-    var method = req.query.method;
-    var total;
-
-    if(req.query.method == 'add'){
-        total = x+y;
-    }
-    else if(req.query.method == 'multiply'){
-        total = x*y;
-    }
-    else if(req.query.method == 'subtract'){
-        total = x-y;
-    }
-    else if(req.query.method == 'divide'){
-        total = x/y;
-    }
-    res.json({
-        "x" : x, 
-        "y" : y,
-        "operation" : method,
-        "result" : total
-    });
-});
-
-module.exports = router;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-const express = require('express');
-const router = express.Router();
-
-
-router.get('/', (req, res, next) => {
     var operation = req.query.method;
     var i = req.query.x;
     var j = req.query.y;
@@ -93,5 +40,3 @@ router.get('/', (req, res, next) => {
 });
 
 module.exports = router;
-
-*/
