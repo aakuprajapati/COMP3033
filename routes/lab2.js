@@ -29,7 +29,7 @@ router.get('/', (req, res, next) => {
             result = x/y;
     }
     else {
-        console.error("Please type method name again");
+        res.json("Please type method name again");
     }
     res.json({
         "x" : x, 
